@@ -1,6 +1,8 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage{import}
-\subimport{lib/modern/}{modern_short.tex}
+%\subimport{lib/modern/}{modern_short.tex}
+\include{lib/modern/modern_short}
+\include{lib/utility/code}
 
 \begin{document}	
 	\setformat
@@ -32,5 +34,17 @@
 	\subsection*{Subsection}
 	
 	\[\left| \sum_{k=1}^l (-1)^{k+1} a_k -\sum_{k=1}^\infty (-1)^{k+1} a_k\right| \leq a_{l+1}\]\
+	
+	\pagebreak
+	
+	\begin{lstlisting}[language=Python]
+	class Person:
+  		def __init__(self, name, age):
+    		self.name = name
+    		self.age = age #comment
+
+	p1 = Person("John", 36)
+
+	print(p1)\end{lstlisting}
 	
 \end{document}
