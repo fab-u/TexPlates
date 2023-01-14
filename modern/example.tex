@@ -1,0 +1,36 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\include{lightblue_short}
+
+\begin{document}	
+	\setformat
+	\maketitle{16.12.2022}{Fabian Bühlmann}{Thats my title}
+	
+	\section{Section}
+	\begin{fullbox}
+		hello world
+	\end{fullbox}
+	\section{My second section}
+	\textbf{Definition:} \lipsum[13]
+	
+	\begin{fullbox}
+	 	\begin{align*}
+	 		f:[a,b] &\rightarrow \mathbb{R}\\
+	 		x &\mapsto \int_a^x g(u)\; du
+	 	\end{align*}
+	\end{fullbox}
+	
+	\begin{outline}
+		\textbf{Satz:} \lipsum[28]
+	 
+	 	\bbmatrix{
+			a_{11} & a_{12} & \dotsi & a_{1n}\\
+			a_{21} & \vdots & \ddots & a_{2n}\\
+			a_{m1} & a_{m2} & \dotsi & a_{mn}\\}	
+	\end{outline}
+	 	
+	\subsection{Subsection}
+	
+	\[\left| \sum_{k=1}^l (-1)^{k+1} a_k -\sum_{k=1}^\infty (-1)^{k+1} a_k\right| \leq a_{l+1}\]\
+	
+\end{document}

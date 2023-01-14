@@ -1,0 +1,36 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{import}
+\subimport{lib/modern/}{modern_short.tex}
+
+\begin{document}	
+	\setformat
+	\maketitle{Datum oder so}{hier könnte der Name stehen}{Das ist ein Titel}
+	
+	\section*{Section}
+	\begin{fullbox}
+		hello world
+	\end{fullbox}
+	\section*{My second section}
+	\textbf{Definition:} \lipsum[13]
+	
+	\begin{fullbox}
+	 	\begin{align*}
+	 		f:[a,b] &\rightarrow \mathbb{R}\\
+	 		x &\mapsto \int_a^x g(u)\; du
+	 	\end{align*}
+	\end{fullbox}
+	
+	\begin{outline}
+		\textbf{Satz:} (Zwischenwertsatz) Sei $f:[a,b]\rightarrow \mathbb R$ eine stetige Funktion. Für jedes $c \in [f(a),f(b)]$ existiert ein $x \in [a,b]$ so dass $f(x) = c$.  
+	 
+	 	\bbmatrix{
+			a_{11} & a_{12} & \dotsi & a_{1n}\\
+			a_{21} & \vdots & \ddots & a_{2n}\\
+			a_{m1} & a_{m2} & \dotsi & a_{mn}\\}	
+	\end{outline}
+	 	
+	\subsection*{Subsection}
+	
+	\[\left| \sum_{k=1}^l (-1)^{k+1} a_k -\sum_{k=1}^\infty (-1)^{k+1} a_k\right| \leq a_{l+1}\]\
+	
+\end{document}
