@@ -1,4 +1,6 @@
 # TexPlates
 
-Style Templates for LaTex Documents
-Utility for LaTex
+- Style Templates for LaTeX Documents
+- LaTeX Utility
+  - Code
+  - Math
