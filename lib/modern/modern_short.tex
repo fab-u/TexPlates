@@ -1,0 +1,111 @@
+%\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\setlength{\parindent}{0pt}
+
+%%% Fonts zum experimentieren
+%\usepackage{xfrac,unicode-math}
+%\usepackage{cmbright}
+%\usepackage{arev}
+%\usepackage{sansmathfonts}
+
+%\usepackage{lxfonts}
+%\usepackage[light,math]{iwona}
+%\usepackage[math]{iwona}
+
+%\usepackage[sfdefault,lining]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+%\usepackage[fakebold]{firamath-otf}
+%\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+%\usepackage{mathpazo}
+%\usepackage{newtxmath}
+
+%\setmathfont{Libertinus Math}%[version=libertinus]
+%\usepackage[math]{kurier}
+%\usepackage{cmbright}
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{avant}
+\usepackage{helvet}
+
+%%% define colors %%%
+\usepackage{xcolor}
+\usepackage{transparent}
+\definecolor{titlepagecolor}{cmyk}{1,0,0,0.5}
+\definecolor{myblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{myred}{rgb}{0.8, 0.25, 0.33}
+\definecolor{lightblue}{rgb}{0.68, 0.85, 0.9}
+
+% set main/accent color
+\newcommand{\maincolor}{myblue}
+\newcommand{\accentcolor}{\maincolor!30}
+
+%%% Section title formatting %%%
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries\sffamily\color{\maincolor}}
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titleformat*{\subsection}{\large\bfseries\sffamily\color{\maincolor}}
+\titlespacing*{\subsection}{0pt}{10pt}{5pt}
+\titleformat*{\subsubsection}{\bfseries\sffamily\color{\maincolor}}
+\titlespacing*{\subsubsubsection}{0pt}{10pt}{5pt}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools} 
+
+\usepackage{tikz}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+%%%%% short image insert %%%%%
+
+%\immage{imageName}{7cm}
+
+\newcommand{\image}[2]{
+	\begin{figure}[h]
+	\includegraphics[width=#2]{#1}
+	\centering
+	\end{figure}}
+	
+\newcommand{\bbmatrix}[1]{\[ \begin{bmatrix} #1 \end{bmatrix}\]}
+
+%%%%% textbox commands %%%%%
+
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{lipsum}
+
+%begin{fullbox}
+%... text in filled box ...
+%end{fullbox}
+
+%begin{outline}
+%... outlined text ...
+%end{outline}
+
+\newmdenv[innerlinewidth = 0.5pt, roundcorner = 8pt, linecolor = white, innerleftmargin = 10pt, innerrightmargin = 10pt, innertopmargin = 10pt, innerbottommargin = 10pt, backgroundcolor = \accentcolor]{fullbox}
+
+\newmdenv[innerlinewidth = 0.8pt, roundcorner = 8pt, linecolor = \maincolor, innerleftmargin = 10pt, innerrightmargin = 10pt, innertopmargin = 10pt, innerbottommargin = 10pt]{outline}
+
+%%%%% maketitle %%%%%
+%\maketitle{top left text}{top right text}{title}
+
+\renewcommand{\maketitle}[3]{
+	{#1 \hfill #2
+	\vspace{0.3cm} 
+	{\color{\maincolor}\hrule height 2pt}
+	\begin{center}
+	\vspace{0.2cm}
+	\textbf{\color{\maincolor}\LARGE\sffamily #3}
+	\vspace{0.2cm}
+	\end{center} 
+	{\color{\maincolor}\hrule height 2pt}
+	\vspace{0.3cm}}}
+
+%%%%% set format parameters in document %%%%%
+\newcommand{\setformat}{
+	\setlength{\abovedisplayskip}{0pt}
+	\setlength{\belowdisplayskip}{0pt}
+	\setlength{\abovedisplayshortskip}{0pt}
+	\setlength{\belowdisplayshortskip}{0pt}}
