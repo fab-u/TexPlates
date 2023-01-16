@@ -1,0 +1,12 @@
+%begin{fullbox}
+%... text in filled box ...
+%end{fullbox}
+
+%begin{outline}
+%... outlined text ...
+%end{outline}
+\usepackage[framemethod=tikz]{mdframed}
+
+\newmdenv[innerlinewidth = 0.5pt, roundcorner = 8pt, linecolor = white, innerleftmargin = 10pt, innerrightmargin = 10pt, innertopmargin = 10pt, innerbottommargin = 10pt, backgroundcolor = \accentcolor]{fullbox}
+
+\newmdenv[innerlinewidth = 0.8pt, roundcorner = 8pt, linecolor = \maincolor, innerleftmargin = 10pt, innerrightmargin = 10pt, innertopmargin = 10pt, innerbottommargin = 10pt]{outline}
